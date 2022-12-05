@@ -1,0 +1,28 @@
+.counters__value {
+  display: flex;
+  justify-content: space-evenly;
+  background: #b84d69;
+  :hover {
+    cursor: pointer;
+  }
+  p {
+    margin: 0 15px 15px 15px;
+    font-size: 2.5rem;
+    background: #b84d69;
+  }
+}
+
+.counters__title {
+  background: #b84d69;
+}
+
+.counters__display {
+  font-size: 1.5rem;
+  background: #b84d69;
+}
+
+.counters {
+  border: 2px solid black;
+  margin: 0 5px 0 5px;
+  background: #b84d69;
+}

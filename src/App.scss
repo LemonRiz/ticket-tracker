@@ -1,0 +1,20 @@
+@use "./assets/sass/_variables.scss" as *;
+
+* {
+  background: #ffe5b4;
+}
+
+.tickets {
+  display: grid;
+  height: 75vh;
+  width: 95vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3.5%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
