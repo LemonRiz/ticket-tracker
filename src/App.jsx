@@ -35,10 +35,6 @@ const App = () => {
     return <Employee name={person.name} role={person.role} key={person.id} />;
   });
 
-  const roles = filteredRoles.map((person) => {
-    return <Employee name={person.name} role={person.role} key={person.id} />;
-  });
-
   return (
     <div className="app">
       <header className="greeting">
