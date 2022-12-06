@@ -38,7 +38,9 @@ const App = () => {
   return (
     <div className="app">
       <header className="greeting">
-        <h1 className="greeting__heading">Ticket Tracker</h1>
+        <h1 className="greeting__heading">
+          <marquee>Ticket Tracker</marquee>
+        </h1>
         <h2>Search by Employee Name</h2>
         <div className="searchbox">
           <Searchbox
