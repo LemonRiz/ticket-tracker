@@ -1,6 +1,5 @@
 import React from "react";
 import "./Searchbox.scss";
-import { useState } from "react";
 
 const Searchbox = (props) => {
   const { label, searchTerm, handleInput } = props;
