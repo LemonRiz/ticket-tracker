@@ -12,7 +12,7 @@ const Dropdown = (props) => {
         name="roles"
         id="roles"
         onChange={handleSelector}
-        value={selectedRole}
+        value={""}
       >
         <option value="">Choose!</option>
         <option value="Junior Software Developer">

@@ -18,17 +18,21 @@ const App = () => {
     setSelectedRole(event.target.value);
   };
 
+  const filteredRoles = team.filter((person) => {
+    return person.role.includes(selectedRole);
+  });
+
   // filter employees based on search term from searchbox
   const filteredEmployee = team.filter((person) => {
     const filteredLower = person.name.toLowerCase();
-    return filteredLower.includes(searchTerm);
+    return (
+      filteredLower.includes(searchTerm) && person.role.includes(selectedRole)
+    );
   });
+  console.log(filteredEmployee);
+
   const people = filteredEmployee.map((person) => {
     return <Employee name={person.name} role={person.role} key={person.id} />;
-  });
-
-  const filteredRoles = team.filter((person) => {
-    return person.role.includes(selectedRole);
   });
 
   const roles = filteredRoles.map((person) => {
@@ -52,7 +56,7 @@ const App = () => {
             handleSelector={handleSelector}
           />
         </div>
-        <div className="tickets">{selectedRole != "" ? roles : people}</div>
+        <div className="tickets">{people}</div>
       </header>
     </div>
   );
