@@ -30,7 +30,10 @@ const App = () => {
   const filteredRoles = team.filter((person) => {
     return person.role.includes(selectedRole);
   });
-  console.log(filteredRoles);
+
+  const roles = filteredRoles.map((person) => {
+    return <Employee name={person.name} role={person.role} key={person.id} />;
+  });
 
   return (
     <div className="app">
@@ -49,7 +52,7 @@ const App = () => {
             handleSelector={handleSelector}
           />
         </div>
-        <div className="tickets">{people} </div>
+        <div className="tickets">{selectedRole != "" ? roles : people}</div>
       </header>
     </div>
   );

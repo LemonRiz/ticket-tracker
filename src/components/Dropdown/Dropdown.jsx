@@ -1,10 +1,12 @@
 import React from "react";
 
 const Dropdown = (props) => {
-  const { label, selectedRole, handleSelector } = props;
+  const { selectedRole, handleSelector } = props;
   return (
     <div>
-      <label for="roles">Choose a job role:</label>
+      <label for="roles" className="roles">
+        Choose a job role:
+      </label>
 
       <select
         name="roles"
@@ -12,7 +14,7 @@ const Dropdown = (props) => {
         onChange={handleSelector}
         value={selectedRole}
       >
-        <option value="unchanged">Choose!</option>
+        <option value="">Choose!</option>
         <option value="Junior Software Developer">
           Junior Software Developer
         </option>
