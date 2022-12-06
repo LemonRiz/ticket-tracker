@@ -14,7 +14,7 @@ const Dropdown = (props) => {
         onChange={handleSelector}
         value={selectedRole}
       >
-        <option value="git">Choose!</option>
+        <option value="">Choose!</option>
         <option value="Junior Software Developer">
           Junior Software Developer
         </option>
