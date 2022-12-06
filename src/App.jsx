@@ -23,8 +23,8 @@ const App = () => {
     const filteredLower = person.name.toLowerCase();
     return filteredLower.includes(searchTerm);
   });
-  const people = filteredEmployee.map((person, index) => {
-    return <Employee name={person.name} role={person.role} key={index + 1} />;
+  const people = filteredEmployee.map((person) => {
+    return <Employee name={person.name} role={person.role} key={person.id} />;
   });
 
   const filteredRoles = team.filter((person) => {
@@ -35,9 +35,9 @@ const App = () => {
   return (
     <div className="app">
       <header className="greeting">
+        <h1 className="greeting__heading">Ticket Tracker</h1>
+        <h2>Search by Employee Name</h2>
         <div className="searchbox">
-          <h1 className="greeting__heading">Ticket Tracker</h1>
-          <h2>Search by Employee Name</h2>
           <Searchbox
             label={"Employee"}
             searchTerm={searchTerm}

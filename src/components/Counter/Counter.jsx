@@ -18,8 +18,8 @@ const Counter = () => {
       <p className="counters__title">Counter</p>
       <p className="counters__display">{counter}</p>
       <div className="counters__value">
-        <button onClick={increment}>+</button>
         <button onClick={decrement}>-</button>
+        <button onClick={increment}>+</button>
       </div>
     </div>
   );
