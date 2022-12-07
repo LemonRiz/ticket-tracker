@@ -18,10 +18,6 @@ const App = () => {
     setSelectedRole(event.target.value);
   };
 
-  const filteredRoles = team.filter((person) => {
-    return person.role.includes(selectedRole);
-  });
-
   // filter employees based on search term from searchbox
   const filteredEmployee = team.filter((person) => {
     const filteredLower = person.name.toLowerCase();
@@ -29,7 +25,6 @@ const App = () => {
       filteredLower.includes(searchTerm) && person.role.includes(selectedRole)
     );
   });
-  console.log(filteredEmployee);
 
   const people = filteredEmployee.map((person) => {
     return <Employee name={person.name} role={person.role} key={person.id} />;
